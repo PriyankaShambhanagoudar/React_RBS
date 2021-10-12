@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 import "./App.css";
+import DemoOutPut from "./components/Demo/DemoOutput";
 import Button from "./components/UI/Button/Button";
 
 function App() {
-  const [ShowParagraph, setShowParagraph] = useState(false);
+  const [showParagraph, setShowParagraph] = useState(false);
 
   console.log('APP IS RUNNING ');
 
@@ -15,8 +16,9 @@ function App() {
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      {ShowParagraph && <p>This is new!</p>}
+      <DemoOutPut />
       <Button onClick={ToggleParagraphHandler}>Toggle Paragraph</Button>
+
     </div>
   );
 }
